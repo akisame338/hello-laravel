@@ -14,6 +14,9 @@ services:
     build:
       context: .
       dockerfile: ./docker/php/Dockerfile
+      args:
+        - UID=1000
+        - GID=1000
     volumes:
       - ./src:/var/www/html
 
